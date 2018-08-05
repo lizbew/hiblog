@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <title>My Blog</title>
+  </head>
+  <body>
+    <h1>My Blog</h1>
+
+    <div>
+    	<p>blog list</p>
+    	{% if post_list %}
+    		<ul>
+    		{% for post in post_list%}
+    			<li>{{ post.title }}</li>
+    		{% endfor %}
+    		
+    		</ul>
+    	{% else %}
+    		<p>no data</p>
+    	{% endif %}
+    	
+    </div>
+
+    
+  </body>
+</html>
